@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1vh;
+}
+
+/* ******************************* Front Page ******************************************* */
+
+.main-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+
+.main-container img {
+    height: 30em;
+    width: auto;
+    border-radius: 50%;
+}
+
+/* ******************************* Game Page ******************************************* */
+.nav-bar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.nav-bar h1 {
+    font-size: 10em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+}
+
+/* ******************************* Game ******************************************* */
+
+.game-container {
+    background-color: brown;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#player-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-1 img {
+    height: 25em;
+    margin: 8em;
+    cursor: pointer;
+}
+
+#player-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#player-2 img {
+    height: 30em;
+    margin: 8em 12em;
+    cursor: pointer;
+}
+
+.btn {
+    color: black;
+    background-color: cornsilk;
+    height: 3em;
+    width: 8em;
+    border-radius: 25%;
+    border: 2px solid black;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.reset-btn {
+    display: flex;
+    height: 85%;
+    align-items: flex-end;
+}
+
+
+/* ******************************* Result ******************************************* */
+.result {
+    background-color: black;
+    color: white;
+    /* visibility: hidden; */
+    /* height: 15em; */
+    padding: 0.3em 3em 2em 1em;
+    font-size: 4em;
+    display: grid;
+    grid-template-areas:
+    'Result player-1-area player-1-result'
+    'Result player-1-area player-1-result'
+    'Result player-2-area player-2-result'
+    'Result player-2-area player-2-result';
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#result-area {
+    grid-area: Result;
+}
+
+#player-1-area {
+    grid-area: player-1-area;
+}
+
+#player-2-area {
+    grid-area: player-2-area;
+}
+
+#player-1-result {
+    grid-area: player-1-result;
+}
+
+#player-2-result {
+    grid-area: player-2-result;
+}
+
+
+/* ******************************* Footer ******************************************* */
+.footer {
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+
+}
+
+.footer span {
+    margin: 0.3em 0em;
+    font-size: 3em;
+}
