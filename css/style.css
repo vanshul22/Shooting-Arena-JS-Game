@@ -8,6 +8,36 @@ body {
     font-size: 1vh;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.disabled-btn {
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+#finish-game{
+    color:white;
+    height: 100vh;
+    width: 98.5vw;
+    background-color: rgba(0, 0, 0, 0.795);
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+#finish-game img{
+    filter: invert(1);
+    cursor: pointer;
+}
+#finish{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 10em;
+    margin: 3em;
+}
+
 /* ******************************* Front Page ******************************************* */
 
 .main-container {
@@ -26,6 +56,7 @@ body {
 }
 
 /* ******************************* Game Page ******************************************* */
+/* ******************************* NavBar ******************************************* */
 .nav-bar {
     display: flex;
     text-align: center;
@@ -55,10 +86,22 @@ body {
     align-items: center;
 }
 
+#random-number {
+    position: fixed;
+    font-size: 15em;
+    width: 100%;
+    text-align: center;
+}
+
 #player-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#player-1 div {
+    font-size: 3em;
+    font-weight: bold;
 }
 
 #player-1 img {
@@ -73,6 +116,11 @@ body {
     align-items: center;
 }
 
+#player-2 div {
+    font-size: 3em;
+    font-weight: bold;
+}
+
 #player-2 img {
     height: 30em;
     margin: 8em 12em;
@@ -80,14 +128,29 @@ body {
 }
 
 .btn {
-    color: black;
-    background-color: cornsilk;
     height: 3em;
-    width: 8em;
-    border-radius: 25%;
-    border: 2px solid black;
+    width: 9em;
+    border-radius: 11%;
     font-weight: bolder;
     cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.btn:active{
+    transform: translateY(5px);
+}
+.start-btn {
+    display: flex;
+    height: 85%;
+    align-items: flex-end;
 }
 
 .reset-btn {
@@ -107,10 +170,10 @@ body {
     font-size: 4em;
     display: grid;
     grid-template-areas:
-    'Result player-1-area player-1-result'
-    'Result player-1-area player-1-result'
-    'Result player-2-area player-2-result'
-    'Result player-2-area player-2-result';
+        'Result player-1-area player-1-result'
+        'Result player-1-area player-1-result'
+        'Result player-2-area player-2-result'
+        'Result player-2-area player-2-result';
     gap: 10px;
     justify-content: space-around;
     align-items: center;
@@ -140,7 +203,7 @@ body {
 
 /* ******************************* Footer ******************************************* */
 .footer {
-    background-color: blue;
+    background-color: #ffb700;
     width: 100%;
     display: flex;
     text-align: center;
