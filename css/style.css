@@ -40,6 +40,15 @@ body {
     margin: 3em;
 }
 
+#intro {
+    font-size: 3em;
+    padding-top: 20em;
+    padding-left: 5em;
+}
+.intro-hide{
+    display: none;
+}
+
 /* ******************************* Front Page ******************************************* */
 
 .main-container {

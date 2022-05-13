@@ -24,7 +24,7 @@ function refreshPage() {
 
 function diceRoll() {
     // Generating random number from 0 to 5.
-    let randomNumber = Math.floor(Math.random() * 51);
+    let randomNumber = Math.floor(Math.random() * 6);
 
     // Checking if random number already shown on DOM.
     if (!!document.getElementById("random-number")) {
@@ -90,6 +90,10 @@ document.getElementById("start-btn").addEventListener("click", () => {
     let hiddenClasses = document.querySelectorAll(".hidden");
     for (let hidden of hiddenClasses) {
         hidden.classList.remove("hidden");
+    };
+    let hiddenIntros = document.querySelectorAll(".intro");
+    for (let hiddenIntro of hiddenIntros) {
+        hiddenIntro.classList.add("intro-hide");
     };
 
     // Checking for reset button have or not in DOM.
