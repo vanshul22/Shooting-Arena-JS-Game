@@ -34,7 +34,7 @@ function diceRoll() {
         let div = document.createElement("div");
         div.innerText = randomNumber;
         div.id = "random-number";
-        document.querySelector(".start-btn").after(div);
+        document.querySelector("#player-1").after(div);
     };
     return randomNumber;
 };
